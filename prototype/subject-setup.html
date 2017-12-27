@@ -21,7 +21,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="./account-registration.html">Registration</a>
+        <a class="nav-link" href="./account-registration.html">Registration
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./authentication.html">Authentication</a>
@@ -33,13 +34,12 @@
         <a class="nav-link" href="./password-recovery.html">Password recovery
         </a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Organization setup
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" href="./subject-setup.html">Subject setup
+        <a class="nav-link" href="./organization-setup.html">Organization setup</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Subject setup
+          <span class="sr-only">(current)</span>
         </a>
       </li>
     </ul>
@@ -49,39 +49,77 @@
 
 <body>
   <div class="container" style="max-width:540px">
-    <h1>Organization setup</h1>
+    <h1>Create subject form</h1>
     <form id="needs-validation" novalidate>
+      <h2>General</h2>
       <div class="form-group">
-        <label for="org-name">Organization name</label>
-        <input type="text" class="form-control" id="org-name" placeholder="Organization name" required>
-        <div class="invalid-feedback">Please enter organization name</div>
-      </div>
-      <p>Organization type</p>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked> Enterprise
-        </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> University
-        </label>
+        <label for="subj-title">Subject title</label>
+        <input type="text" class="form-control" id="subj-title" placeholder="Subject title" required>
+        <div class="invalid-feedback">Please enter subject title</div>
       </div>
       <div class="form-group">
-        <label for="org-dep">Departpement</label>
-        <input type="text" class="form-control" id="org-dep" placeholder="Department">
+        <label for="subj-title-alt">Alternative title</label>
+        <input type="text" class="form-control" id="subj-title-alt" placeholder="Alternative title" required>
+        <div class="invalid-feedback">Please enter subject alternative title</div>
       </div>
-      <button type="submit" class="btn btn-primary">Confirm organization</button>
+      <div class="form-group">
+        <label for="subj-codet">Code</label>
+        <input type="text" class="form-control" id="subj-code" placeholder="Code" required>
+        <div class="invalid-feedback">Please enter subject code</div>
+      </div>
+      <div class="form-group">
+        <label for="subj-volume">Volume</label>
+        <input type="number" class="form-control" id="subj-volume" placeholder="ECTS/EAP" required>
+        <div class="invalid-feedback">Please enter subject volume(number)</div>
+      </div>
+      <div class="form-group">
+        <label for="subj-contact-hour">Contact hours</label>
+        <input type="number" class="form-control" id="subj-contact-hour" placeholder="Contact hours" required>
+        <div class="invalid-feedback">Please enter contact hours</div>
+      </div>
+      <div class="form-group">
+        <label for="subj-lecturer">Main lecturer</label>
+        <input type="text" class="form-control" id="subj-lecturer" placeholder="Main lecturer" required>
+        <div class="invalid-feedback">Please enter subject lecturer</div>
+      </div>
+      <div class="form-group">
+        <p>Semester</p>
+        <div class="form-check">
+          <label class="subj-semester-autumn">
+            <input class="form-check-input" type="checkbox" id="autumn-checkbox" value="autumn">Autumn
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="subj-semester-spring">
+            <input class="form-check-input" type="checkbox" id="spring-checkbox" value="spring">Spring
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <p>Assesment form</p>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="E" checked> E
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="A"> A
+          </label>
+        </div>
+      </div>
+      <h2>Competencies</h2>
+
+      <button type="submit" class="btn btn-primary">Save</button>
       <a class="btn btn-secondary" href="#" role="button">Cancel</a>
+
     </form>
   </div>
-
   <!-- Optional JavaScript -->
   <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
       'use strict';
-
       window.addEventListener('load', function () {
         var form = document.getElementById('needs-validation');
         form.addEventListener('submit', function (event) {
