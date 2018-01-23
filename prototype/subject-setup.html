@@ -167,10 +167,17 @@
 
       <h2>Learning outcomes from "The occupational qualifications system" standard</h2>
       <div class="form-group">
-        <div class="form-group">
-          <input type="text" class="form-control">
+        <div class="input-group">
+          <select class="custom-select" id="inputGroupSelect04">
+            <option selected>Choose qualification</option>
+            <option value="1">Computer science</option>
+            <option value="2">Qualification name 2</option>
+            <option value="3">Qualification name 3</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Confirm selection</button>
+          </div>
         </div>
-        <button type="button" class="btn btn-secondary">Add</button>
       </div>
 
       <!-- Table for Learning outcomes from qualifications system -->
@@ -181,7 +188,6 @@
             <th scope="col">Outcome</th>
             <th scope="col">Subject outcome ID</th>
             <th scope="col">Compliant</th>
-            <th scope="col">Remove</th>
           </tr>
         </thead>
         <tbody>
@@ -197,9 +203,6 @@
             <td>
               <div class="alert alert-success" role="alert" style="margin-bottom:0em">Yes!</div>
             </td>
-            <td>
-              <button type="button" class="btn btn-danger">X</button>
-            </td>
           </tr>
           <tr>
             <th scope="row">2</th>
@@ -212,9 +215,6 @@
             </td>
             <td>
               <div class="alert alert-danger" role="alert" style="margin-bottom:0em">No!</div>
-            </td>
-            <td>
-              <button type="button" class="btn btn-danger">X</button>
             </td>
           </tr>
         </tbody>
