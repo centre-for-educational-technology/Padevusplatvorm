@@ -74,11 +74,6 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="subj-title-alt">Alternative title</label>
-            <input type="text" class="form-control" id="subj-title-alt" placeholder="Alternative title" required>
-            <div class="invalid-feedback">Please enter subject alternative title</div>
-          </div>
-          <div class="form-group">
             <label for="subj-codet">Code</label>
             <input type="text" class="form-control" id="subj-code" placeholder="Code" required>
             <div class="invalid-feedback">Please enter subject code</div>
@@ -87,11 +82,6 @@
             <label for="subj-volume">Volume</label>
             <input type="number" class="form-control" id="subj-volume" placeholder="ECTS/EAP" required>
             <div class="invalid-feedback">Please enter subject volume(number)</div>
-          </div>
-          <div class="form-group">
-            <label for="subj-contact-hour">Contact hours</label>
-            <input type="number" class="form-control" id="subj-contact-hour" placeholder="Contact hours" required>
-            <div class="invalid-feedback">Please enter contact hours</div>
           </div>
           <div class="form-group">
             <label for="subj-lecturer">Main lecturer</label>
@@ -128,7 +118,7 @@
           </div>
         </div>
         <!-- COL RIGT END -->
-      
+
       </div>
       <!-- ROW END -->
 
@@ -137,18 +127,119 @@
       <div class="form-group">
         <input id="ms1" style="width:400px;" type="text" name="ms1" />
         <div style="clear:both;"></div>
-        <br>
       </div>
 
+      <h2>Learning outcomes</h2>
+      <div class="form-group">
+        <div class="form-group">
+          <input type="text" class="form-control">
+        </div>
+        <button type="button" class="btn btn-secondary">Add</button>
+      </div>
+
+      <!-- Table for Learning outcomes -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Outcome</th>
+            <th scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Unit testing and coding best practices for unit tests</td>
+            <td>
+              <button type="button" class="btn btn-danger">X</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Another learning outcome...</td>
+            <td>
+              <button type="button" class="btn btn-danger">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Table for Learning outcomes END -->
+
+      <h2>Learning outcomes from "The occupational qualifications system" standard</h2>
+      <div class="form-group">
+        <div class="form-group">
+          <input type="text" class="form-control">
+        </div>
+        <button type="button" class="btn btn-secondary">Add</button>
+      </div>
+
+      <!-- Table for Learning outcomes from qualifications system -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Outcome</th>
+            <th scope="col">Subject outcome ID</th>
+            <th scope="col">Compliant</th>
+            <th scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Unit testing</td>
+            <td>
+              <select class="form-control form-control-sm" id="selesctSubjectOutcomeID">
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </td>
+            <td>
+              <div class="alert alert-success" role="alert" style="margin-bottom:0em">Yes!</div>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger">X</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Integration testing</td>
+            <td>
+              <select class="form-control form-control-sm" id="selesctSubjectOutcomeID">
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </td>
+            <td>
+              <div class="alert alert-danger" role="alert" style="margin-bottom:0em">No!</div>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Table for Learning outcomes from qualifications system END -->
+
+      <!-- Progress bar for comparison -->
+      <div class="form-group">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+
+      <!-- Form submit button -->
       <button type="submit" class="btn btn-primary">Save</button>
       <a class="btn btn-secondary" href="#" role="button">Cancel</a>
     </form>
   </div>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-        <span class="text-muted"></span>
-        <br>
-        <br>
+      <span class="text-muted"></span>
+      <br>
+      <br>
     </div>
   </footer>
 
