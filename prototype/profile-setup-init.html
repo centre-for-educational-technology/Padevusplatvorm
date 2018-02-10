@@ -102,7 +102,153 @@
 
       <!-- Single COL -->
       <h2>Curricula</h2>
-      <a href="#">Add curriculum</a>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Add curriculum (1...n)
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+
+              <h2>Academic organization</h2>
+              <div class="form-group">
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Start typing...</option>
+                    <option>Tallinn University</option>
+                    <option value="1">University of Tartu</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Add</button>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Programme title</h2>
+              <div class="form-group">
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Start typing...</option>
+                    <option>Management of Information Technologie</option>
+                    <option value="1">Informatics</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Add</button>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Curriculum subjects</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Competencies</th>
+                    <th scope="col">Completed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <input type="checkbox">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <input type="checkbox" checked>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2>Additional subjects</h2>
+              <div class="form-group">
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Start typing...</option>
+                    <option>Management of Information Technologie</option>
+                    <option value="1">Informatics</option>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Add</button>
+                  </div>
+                </div>
+              </div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Competencies</th>
+                    <th scope="col">Completed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Remove</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Remove</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Remove</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subject title1</th>
+                    <td>IF12312</td>
+                    <td>Java, C#, Problem solving</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Remove</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Single COL END -->
 
       <h2>Additional courses/trainings/projects/experiences</h2>
