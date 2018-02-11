@@ -126,140 +126,135 @@
       <!-- ROW END -->
 
       <!-- Single COL -->
-      <h2>Competencies</h2>
-      <div class="form-group">
-        <input id="ms1" style="width:400px;" type="text" name="ms1" />
-        <div style="clear:both;"></div>
-      </div>
-
-      <h2>Learning outcomes</h2>
-      <div class="form-group">
-        <div class="form-group">
-          <input type="text" class="form-control">
-        </div>
-        <button type="button" class="btn btn-secondary">Add</button>
-      </div>
-
-      <!-- Table for Learning outcomes -->
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Outcome</th>
-            <th scope="col">Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Unit testing and coding best practices for unit tests</td>
-            <td>
-              <button type="button" class="btn btn-danger">X</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Another learning outcome...</td>
-            <td>
-              <button type="button" class="btn btn-danger">X</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Table for Learning outcomes END -->
-
-      <h2>Learning outcomes from "The occupational qualifications system" standard</h2>
+      <h2>Qualification standard mapping</h2>
       <div class="form-group">
         <div class="input-group">
           <select class="custom-select" id="inputGroupSelect04">
-            <option selected>Choose qualification</option>
-            <option value="1">Computer science</option>
-            <option value="2">Qualification name 2</option>
-            <option value="3">Qualification name 3</option>
+            <option selected>Start typing....</option>
+            <option value="1">Noorem tarkvaraarendaja, tase 4</option>
+            <option value="2">Noorem tarkvaraarendaja, tase 3</option>
+            <option value="3">Noorem tarkvaraarendaja, tase 2</option>
           </select>
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Confirm selection</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+              aria-controls="collapseExample">Select</button>
           </div>
         </div>
-      </div>
-
-      <!-- Table for Learning outcomes from qualifications system -->
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Outcome</th>
-            <th scope="col">Compliant</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Unit testing</td>
-            <td>
-                <input checked type="checkbox">
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Integration testing</td>
-            <td>
-                <input type="checkbox">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Table for Learning outcomes from qualifications system END -->
-
-      <!-- Progress bar for comparison -->
-      <div class="form-group">
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        <br>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="7">4/7</div>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">B2.1. Infosüsteemi ja äristrateegia kooskõlastamine</th>
+                  <th scope="col">Manage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" colspan="3">Knowledge 2/4</th>
+                </tr>
+                <tr>
+                  <td colspan="2">a) Knows something</td>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">b) Knows something else</td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">c) Knowledge 3</td>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">d) Knowledge 4</td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3">Skills 2/3</th>
+                </tr>
+                <tr>
+                  <td colspan="2">a) Skill 1</td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">b) Skill 2</td>
+                  <td>
+                    <input type="checkbox" checked>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">c) Skill 3</td>
+                  <td>
+                    <input type="checkbox">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
 
-      <!-- Form submit button -->
-      <button type="submit" class="btn btn-primary">Save</button>
-      <a class="btn btn-secondary" href="#" role="button">Cancel</a>
+        <h2>Competencies</h2>
+        <div class="form-group">
+          <input id="ms1" style="width:400px;" type="text" name="ms1" />
+          <div style="clear:both;"></div>
+        </div>
+
+        <!-- Form submit button -->
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-secondary" href="#" role="button">Cancel</a>
     </form>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted"></span>
-      <br>
-      <br>
     </div>
-  </footer>
 
-  <!-- Optional JavaScript -->
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        var form = document.getElementById('needs-validation');
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted"></span>
+        <br>
+        <br>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          var form = document.getElementById('needs-validation');
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
         }, false);
-      }, false);
-    })();
-  </script>
+      })();
+    </script>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-    crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
 
-  <script src="./js/tags.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src="./js/tags.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 </body>
 
 </html>
