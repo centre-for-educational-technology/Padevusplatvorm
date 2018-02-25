@@ -32,10 +32,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# Javascript linting
-node_modules
-package-lock.json
-.eslintrc.js
-.eslintrc.json
-package.json
