@@ -8,18 +8,18 @@ const environment = () => {
 			api = 'http://localhost:3000/api';
 			env = 'dev';
 			break;
-		case 'test.ddcmp.com':
-			api = 'http://test.ddcmp.com/api';
+		case 'www.platform.duttiv.com':
+			api = 'https://www.platform.duttiv.com/api';
 			env = 'prod';
 			break;
-		case 'ddcmp.com':
-			api = 'https://ddcmp.com/api';
+		case 'platform.duttiv.com':
+			api = 'https://platform.duttiv.com/api';
 			env = 'prod';
 			break;
 		default:
 			//live
-			api = 'https://www.ddcmp.com/api';
-			env = 'prod';
+            api = 'https://platform.duttiv.com/api';
+            env = 'prod';
 	}
 	return {
 		apiUrl: api,
