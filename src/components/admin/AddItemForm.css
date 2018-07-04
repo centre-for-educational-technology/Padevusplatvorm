@@ -1,0 +1,9 @@
+#add-item-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.add-item-input {
+    width: auto;
+    flex-grow: 100;
+}
