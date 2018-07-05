@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Form} from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-
-import './LoginForm.css';
+import {Button} from "semantic-ui-react";
 
 export default class LoginForm extends Component {
 	state = {
@@ -21,19 +20,23 @@ export default class LoginForm extends Component {
 
 	render() {
 		return (
-			<Form id="login-form" onSubmit={this.login}>
+			<Form id="login-form">
 				<Form.Input
 					placeholder="Email"
 					onChange={e => this.setState({...this.state, email: e.target.value})}
 				/>
 				<Form.Input
-					placeholder="Password"
+					placeholder="Parool"
 					type="password"
 					onChange={e => this.setState({...this.state, password: e.target.value})}
 				/>
-				<Form.Button id="login-form-button">
-					Login
-				</Form.Button>
+                <Button
+					fluid
+                    className="red-bg"
+                    type="submit"
+                    onClick={this.login}>
+                    Logi sisse
+                </Button>
 			</Form>
 		);
 	}

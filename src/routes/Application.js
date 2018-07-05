@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import LoginContainer from '../containers/LoginContainer';
-import ListContainer from '../containers/ListContainer';
+import IntroContainer from '../containers/IntroContainer';
 import DashboardContainer from "../containers/DashboardContainer";
 import StandardContainer from "../containers/StandardContainer";
 import CourseContainer from "../containers/CourseContainer";
 import CurriculumContainer from "../containers/CurriculumContainer";
 import ProfileContainer from "../containers/ProfileContainer";
+import RegistrationContainer from "../containers/RegistrationContainer";
 
 class Application extends Component {
 
@@ -30,9 +31,10 @@ class Application extends Component {
         }
 		return (
 			<Switch>
-                <Route exact path="/" component={ListContainer}/>
+                <Route exact path="/" component={IntroContainer}/>
                 <Route exact path="/login" component={LoginContainer}/>
-				<Route component={ListContainer}/>
+                <Route exact path="/register" component={RegistrationContainer}/>
+				<Route component={IntroContainer}/>
 			</Switch>
 		);
 	}

@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {withRouter} from "react-router";
 
-class ListContainer extends Component {
+class IntroContainer extends Component {
 
 	render() {
-		return <div>ListContainer</div>;
+		return <div>IntroContainer</div>;
 	}
 }
 
@@ -18,5 +18,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default withRouter(
-	connect(mapStateToProps, mapDispatchToProps)(ListContainer)
+	connect(mapStateToProps, mapDispatchToProps)(IntroContainer)
 );

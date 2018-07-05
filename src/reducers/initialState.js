@@ -1,11 +1,13 @@
 export default {
 	user: {
+	    isRegistering: false,
 		isLoggingIn: false,
 		failed: false,
 		token: '',
 		userId: 0,
 		email: '',
-		loginErrorMessage: ''
+		loginErrorMessage: '',
+        registerErrorMessage: ''
 	},
     standard: {
 	    standardsList: [],

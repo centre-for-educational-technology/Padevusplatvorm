@@ -4,9 +4,9 @@ import {withRouter} from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as userActions from '../../actions/user';
-import {Icon} from "semantic-ui-react";
+import {Dropdown, Icon} from "semantic-ui-react";
 
-const Menu = ({userId, actions}) => (
+const Menu = ({userId, email, actions}) => (
     <div className="menu">
         <h1 className="tlu title">
             <span className="narrow">Pädevusplatvorm</span>
@@ -14,8 +14,12 @@ const Menu = ({userId, actions}) => (
                 ? (
                     <div className="right-item">
                         <a style={{color: "#ffffff", marginRight: "12px"}} href="/dashboard">Esileht</a>
-                        <a style={{color: "#ffffff", marginRight: "12px"}} href="/profile">Minu profiil</a>
-                        <span onClick={() => actions.logout()}>Logout</span>
+                        <Dropdown item text={email}>
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="/profile">Minu profiil</Dropdown.Item>
+                                <Dropdown.Item onClick={() => actions.logout()}>Logout</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </div>
                 )
                 : null}
@@ -26,7 +30,8 @@ const Menu = ({userId, actions}) => (
 
 function mapStateToProps(state) {
     return {
-        userId: state.user.userId
+        userId: state.user.userId,
+        email: state.user.email
     };
 }
 
