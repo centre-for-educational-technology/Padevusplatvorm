@@ -182,7 +182,7 @@ export default class ViewCurriculum extends Component {
                             : null}
                     </Grid.Column>
                 </Grid.Row>
-                {standard && standard.competencies ? standard.competencies.map((item, key) => {
+                {standard && standard.competencies && curriculum.competencies ? standard.competencies.map((item, key) => {
                     return (
                         <Grid.Row key={key}>
                             <Grid.Column width={15}>
