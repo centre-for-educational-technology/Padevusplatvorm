@@ -6,6 +6,11 @@ import AddModule from "./AddModule";
 
 export default class AddCurriculumForm extends Component {
 
+    state = {
+        isValid: true,
+        isValidating: false
+    };
+
     componentWillReceiveProps() {
         this.setState({
             isValid: true
@@ -38,10 +43,6 @@ export default class AddCurriculumForm extends Component {
         }
     }
 
-    state = {
-        isValid: true,
-        isValidating: false
-    };
     render() {
         const {curriculum, standard, course, curriculumActions} = this.props;
         return (

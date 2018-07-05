@@ -4,7 +4,7 @@ import {withRouter} from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as userActions from '../../actions/user';
-import {Dropdown, Icon} from "semantic-ui-react";
+import {Dropdown} from "semantic-ui-react";
 
 const Menu = ({userId, email, actions}) => (
     <div className="menu">
@@ -16,8 +16,8 @@ const Menu = ({userId, email, actions}) => (
                         <a style={{color: "#ffffff", marginRight: "12px"}} href="/dashboard">Esileht</a>
                         <Dropdown item text={email}>
                             <Dropdown.Menu>
-                                <Dropdown.Item href="/profile">Minu profiil</Dropdown.Item>
-                                <Dropdown.Item onClick={() => actions.logout()}>Logout</Dropdown.Item>
+                                {/*<Dropdown.Item href="/profile">Minu profiil</Dropdown.Item>*/}
+                                <Dropdown.Item onClick={() => actions.logout()}>Logi välja</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>

@@ -5,8 +5,8 @@ import {Button} from "semantic-ui-react";
 
 export default class LoginForm extends Component {
 	state = {
-		email: '',
-		password: ''
+		email: "",
+		password: ""
 	};
 
 	constructor(props) {

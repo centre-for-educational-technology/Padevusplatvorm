@@ -42,6 +42,12 @@ a:hover {
     color: #ffffff !important;
 }
 
+.red-border {
+    border: 1px solid #b71234 !important;
+    color: #b71234 !important;
+    background: #ffffff !important;
+}
+
 .competency-label {
     margin: 4px !important;
     cursor: pointer;

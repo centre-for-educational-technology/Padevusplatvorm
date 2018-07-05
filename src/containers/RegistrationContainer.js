@@ -28,13 +28,6 @@ class RegistrationContainer extends Component {
 
 
     render() {
-        if (this.state.registerSuccess) {
-            return (
-                <a href="/login">
-                    Oled registreeritud. Palun logi sisse.
-                </a>
-            );
-        }
         return (
             <Container>
                 <Card.Group centered>
