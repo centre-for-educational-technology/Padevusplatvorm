@@ -16,7 +16,7 @@ const Menu = ({userId, email, actions}) => (
                         <a style={{color: "#ffffff", marginRight: "12px"}} href="/dashboard">Esileht</a>
                         <Dropdown item text={email}>
                             <Dropdown.Menu>
-                                {/*<Dropdown.Item href="/profile">Minu profiil</Dropdown.Item>*/}
+                                <Dropdown.Item href="/profile">Minu profiil</Dropdown.Item>
                                 <Dropdown.Item onClick={() => actions.logout()}>Logi välja</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
