@@ -45,7 +45,7 @@ class CurriculumContainer extends Component {
                             </Dimmer>
                         )
                         : null}
-                    {selectedCurriculum
+                    {selectedCurriculum && selectedCurriculum.compliance
                         ? (
                             <ViewCurriculum
                                 curriculum={selectedCurriculum}

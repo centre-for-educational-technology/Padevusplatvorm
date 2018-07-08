@@ -44,47 +44,54 @@ export default class ViewCurriculum extends Component {
                             ridiculus mus.
                         </p>
                     </Grid.Column>
-                    <Grid.Column width={8}>
-                        <h3 className="tlu red narrow subtitle">Kutsestandard</h3>
-                        <div style={{marginLeft: "auto", marginRight: "auto", width: "200px"}}>
-                            <Statistic size="small"
-                                       style={{marginLeft: "auto", marginRight: "auto", width: "200px"}}>
-                                <Statistic.Label>
-                                    {curriculum.standardName}
-                                    <br/>
-                                    Tase {curriculum.standardLevel}
-                                </Statistic.Label>
-                            </Statistic>
-                            {curriculum.compliance
-                                ? <div>
-                                    <PieChart
-                                        animate
-                                        startAngle={70}
-                                        lengthAngle={-360}
-                                        totalValue={curriculum.compliance.standardCount}
-                                        lineWidth={20}
-                                        style={{height: "200px", width: "200px"}}
-                                        data={[
-                                            {value: curriculum.compliance.curriculumCount, color: "#b71234"},
-                                            {
-                                                value: curriculum.compliance.standardCount - curriculum.compliance.curriculumCount,
-                                                color: "#efeaeb"
-                                            }
-                                        ]}
-                                    />
-                                    <div style={{width: "200px", height: "100px", position: "absolute", marginTop: "-135px"}}>
-                                        <Statistic size="small"
-                                                   style={{width: "100%", marginLeft: "auto", marginRight: "auto"}}>
-                                            <Statistic.Label>Vastavus</Statistic.Label>
-                                            <Statistic.Value>
-                                                {curriculum.compliance.curriculumCount} / {curriculum.compliance.standardCount}
-                                            </Statistic.Value>
-                                        </Statistic>
+                    {curriculum.compliance
+                        ? (
+                            <Grid.Column width={8}>
+                                <h3 className="tlu red narrow subtitle">Kutsestandard</h3>
+                                <div style={{marginLeft: "auto", marginRight: "auto", width: "200px"}}>
+                                    <Statistic size="small"
+                                               style={{marginLeft: "auto", marginRight: "auto", width: "200px"}}>
+                                        <Statistic.Label>
+                                            {curriculum.standardName}
+                                            <br/>
+                                            Tase {curriculum.standardLevel}
+                                        </Statistic.Label>
+                                    </Statistic>
+                                    <div>
+                                        <PieChart
+                                            animate
+                                            startAngle={70}
+                                            lengthAngle={-360}
+                                            totalValue={curriculum.compliance.standardCount}
+                                            lineWidth={20}
+                                            style={{height: "200px", width: "200px"}}
+                                            data={[
+                                                {value: curriculum.compliance.curriculumCount, color: "#b71234"},
+                                                {
+                                                    value: curriculum.compliance.standardCount - curriculum.compliance.curriculumCount,
+                                                    color: "#efeaeb"
+                                                }
+                                            ]}
+                                        />
+                                        <div style={{
+                                            width: "200px",
+                                            height: "100px",
+                                            position: "absolute",
+                                            marginTop: "-135px"
+                                        }}>
+                                            <Statistic size="small"
+                                                       style={{width: "100%", marginLeft: "auto", marginRight: "auto"}}>
+                                                <Statistic.Label>Vastavus</Statistic.Label>
+                                                <Statistic.Value>
+                                                    {curriculum.compliance.curriculumCount} / {curriculum.compliance.standardCount}
+                                                </Statistic.Value>
+                                            </Statistic>
+                                        </div>
                                     </div>
                                 </div>
-                                : null}
-                        </div>
-                    </Grid.Column>
+                            </Grid.Column>
+                        )
+                        : null}
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
