@@ -50,7 +50,7 @@ export const getCurriculum = (curriculumId) => {
     };
 };
 
-export const getCurriculumCompliance= (curriculumId) => {
+export const getCurriculumCompliance = (curriculumId) => {
     return dispatch => {
         dispatch({
             type: ActionTypes.GET_CURRICULUM_COMPLIANCE

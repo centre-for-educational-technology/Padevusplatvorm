@@ -10,6 +10,10 @@ export default class ViewCurriculum extends Component {
         phd: "doktoriõpe"
     };
 
+    componentWillMount() {
+        this.props.curriculumActions.getCurriculumCompliance(this.props.curriculum.id);
+    }
+
     getModules(curriculumId) {
         this.props.curriculumActions.getCurriculumModules(curriculumId);
         this.props.curriculumActions.getCurriculumCourses(curriculumId);

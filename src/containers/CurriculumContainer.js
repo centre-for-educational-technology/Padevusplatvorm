@@ -18,7 +18,6 @@ class CurriculumContainer extends Component {
             this.props.standardActions.getAllStandards();
         } else {
             this.props.curriculumActions.getCurriculum(curriculumId);
-            this.props.curriculumActions.getCurriculumCompliance(curriculumId);
         }
     }
 
@@ -45,7 +44,7 @@ class CurriculumContainer extends Component {
                             </Dimmer>
                         )
                         : null}
-                    {selectedCurriculum && selectedCurriculum.compliance
+                    {selectedCurriculum
                         ? (
                             <ViewCurriculum
                                 curriculum={selectedCurriculum}
