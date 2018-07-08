@@ -72,17 +72,15 @@ export default class ViewCurriculum extends Component {
                                             }
                                         ]}
                                     />
-                                    <Statistic size="small"
-                                               style={{
-                                                   position: "absolute",
-                                                   marginTop: "-135px",
-                                                   marginLeft: curriculum.compliance.curriculumCount > 10 ? "35px" : "50px"
-                                               }}>
-                                        <Statistic.Label>Vastavus</Statistic.Label>
-                                        <Statistic.Value>
-                                            {curriculum.compliance.curriculumCount} / {curriculum.compliance.standardCount}
-                                        </Statistic.Value>
-                                    </Statistic>
+                                    <div style={{width: "200px", height: "100px", position: "absolute", marginTop: "-135px"}}>
+                                        <Statistic size="small"
+                                                   style={{width: "100%", marginLeft: "auto", marginRight: "auto"}}>
+                                            <Statistic.Label>Vastavus</Statistic.Label>
+                                            <Statistic.Value>
+                                                {curriculum.compliance.curriculumCount} / {curriculum.compliance.standardCount}
+                                            </Statistic.Value>
+                                        </Statistic>
+                                    </div>
                                 </div>
                                 : null}
                         </div>
