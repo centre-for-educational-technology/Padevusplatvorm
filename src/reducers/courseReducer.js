@@ -11,6 +11,9 @@ export const courseReducer = (state = initialState.course, action) => {
         case ActionTypes.GET_COURSE_SUCCESS:
             result = getCourseSuccess(state, action);
             break;
+        case ActionTypes.GET_STANDARD_COURSES_SUCCESS:
+            result = getStandardCoursesSuccess(state, action);
+            break;
         case ActionTypes.GET_FREEFORM_COMPETENCIES_SUCCESS:
             result = getFreeformCompetenciesSuccess(state, action);
             break;
@@ -34,6 +37,7 @@ export const courseReducer = (state = initialState.course, action) => {
             break;
         case ActionTypes.GET_ALL_COURSES:
         case ActionTypes.GET_COURSE:
+        case ActionTypes.GET_STANDARD_COURSES:
         case ActionTypes.GET_FREEFORM_COMPETENCIES:
         case ActionTypes.SAVE_COURSE:
         case ActionTypes.SAVE_FREEFORM_COMPETENCY:
@@ -41,6 +45,7 @@ export const courseReducer = (state = initialState.course, action) => {
             break;
         case ActionTypes.GET_ALL_COURSES_FAILED:
         case ActionTypes.GET_COURSE_FAILED:
+        case ActionTypes.GET_STANDARD_COURSES_FAILED:
         case ActionTypes.GET_FREEFORM_COMPETENCIES_FAILED:
         case ActionTypes.SAVE_COURSE_FAILED:
         case ActionTypes.SAVE_FREEFORM_COMPETENCY_FAILED:
@@ -57,6 +62,14 @@ export const courseReducer = (state = initialState.course, action) => {
 };
 
 export const getAllCoursesSuccess = (state, action) => {
+    return {
+        ...state,
+        coursesList: action.payload,
+        isLoading: false
+    }
+};
+
+export const getStandardCoursesSuccess = (state, action) => {
     return {
         ...state,
         coursesList: action.payload,

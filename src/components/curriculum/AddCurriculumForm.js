@@ -11,6 +11,11 @@ export default class AddCurriculumForm extends Component {
         isValidating: false
     };
 
+    constructor(props) {
+        super(props);
+        this.setStandard = this.setStandard.bind(this);
+    }
+
     componentWillReceiveProps() {
         this.setState({
             isValid: true
@@ -41,6 +46,11 @@ export default class AddCurriculumForm extends Component {
             });
             window.scrollTo(0, 0);
         }
+    }
+
+    setStandard(standardId) {
+        this.props.curriculumActions.changeField("standard", standardId);
+        this.props.courseActions.getStandardCourses(standardId);
     }
 
     render() {
@@ -185,34 +195,38 @@ export default class AddCurriculumForm extends Component {
                                     };
                                 })
                             }
-                            onChange={(e, {value}) => curriculumActions.changeField("standard", value)}
+                            onChange={(e, {value}) => this.setStandard(value)}
                         />
                     </Form.Field>
-                    <Form.Field>
-                        <h3 className="tlu red narrow subtitle">Moodulid</h3>
-                        <List divided relaxed>
-                            {curriculum.modules.map((item, key) => {
-                                return (
-                                    <List.Item key={key}>
-                                        <List.Icon
-                                            name="minus"
-                                            size="large"
-                                            verticalAlign="middle"
-                                            circular link
-                                            onClick={() => curriculumActions.removeModule(key)}/>
-                                        <AddModule
-                                            index={key}
-                                            module={item}
-                                            courses={course.courseList}
-                                            changeField={curriculumActions.changeModuleField}
-                                            setCourses={curriculumActions.setModuleCourses}
-                                        />
-                                    </List.Item>
-                                );
-                            })}
-                        </List>
-                        <Button onClick={curriculumActions.addModule}>Lisa moodul</Button>
-                    </Form.Field>
+                    {curriculum.standard && course.coursesList
+                        ? (
+                            <Form.Field>
+                                <h3 className="tlu red narrow subtitle">Moodulid</h3>
+                                <List divided relaxed>
+                                    {curriculum.modules.map((item, key) => {
+                                        return (
+                                            <List.Item key={key}>
+                                                <List.Icon
+                                                    name="minus"
+                                                    size="large"
+                                                    verticalAlign="middle"
+                                                    circular link
+                                                    onClick={() => curriculumActions.removeModule(key)}/>
+                                                <AddModule
+                                                    index={key}
+                                                    module={item}
+                                                    courses={course.coursesList}
+                                                    changeField={curriculumActions.changeModuleField}
+                                                    setCourses={curriculumActions.setModuleCourses}
+                                                />
+                                            </List.Item>
+                                        );
+                                    })}
+                                </List>
+                                <Button onClick={curriculumActions.addModule}>Lisa moodul</Button>
+                            </Form.Field>
+                        )
+                        : null}
                     <Button
                         className="red-bg"
                         type="submit"

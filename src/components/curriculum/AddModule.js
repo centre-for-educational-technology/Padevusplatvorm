@@ -57,24 +57,26 @@ export default class AddModule extends Component {
                     />
                 </Form.Field>
                 <hr/>
-                <Form.Field>
-                    <Form.Field required>
-                        <label>Õppeained</label>
-                        <Dropdown placeholder="Õppeained" fluid multiple search selection
-                                  options={
-                                      courses.map((course) => {
-                                          return {
-                                              key: course.id,
-                                              value: course.id,
-                                              text: course.code + " " + course.title
-                                          };
-                                      })
-                                  }
-                                  value={module.courses}
-                                  onChange={(e, {value}) => this.props.setCourses(index, value)}
-                        />
-                    </Form.Field>
-                </Form.Field>
+                {courses
+                    ? (
+                        <Form.Field required>
+                            <label>Õppeained</label>
+                            <Dropdown placeholder="Õppeained" fluid multiple search selection
+                                      options={
+                                          courses.map((course) => {
+                                              return {
+                                                  key: course.id,
+                                                  value: course.id,
+                                                  text: course.code + " " + course.title
+                                              };
+                                          })
+                                      }
+                                      value={module.courses}
+                                      onChange={(e, {value}) => this.props.setCourses(index, value)}
+                            />
+                        </Form.Field>
+                    )
+                    : null}
             </List.Content>
         );
     }

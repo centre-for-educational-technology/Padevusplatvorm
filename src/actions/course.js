@@ -93,6 +93,30 @@ export const getAllCourses = () => {
     };
 };
 
+export const getStandardCourses = (standardId) => {
+    return dispatch => {
+        dispatch({
+            type: ActionTypes.GET_STANDARD_COURSES
+        });
+        const promises = [];
+        promises.push(new Promise((resolve, reject) => {
+            axios.get(
+                '/standard/' + standardId + '/courses'
+            ).then(response => {
+                dispatch({
+                    type: ActionTypes.GET_STANDARD_COURSES_SUCCESS,
+                    payload: response.data.data
+                });
+            }).catch(error => {
+                dispatch({
+                    type: ActionTypes.GET_STANDARD_COURSES_FAILED,
+                    payload: error.userMessage
+                });
+            });
+        }));
+    };
+};
+
 export const getCourse = (courseId) => {
     return dispatch => {
         dispatch({

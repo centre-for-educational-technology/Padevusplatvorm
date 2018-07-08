@@ -16,7 +16,6 @@ class CurriculumContainer extends Component {
         const curriculumId = this.props.match.params.curriculumId;
         if (!curriculumId) {
             this.props.standardActions.getAllStandards();
-            this.props.courseActions.getAllCourses();
         } else {
             this.props.curriculumActions.getCurriculum(curriculumId);
             this.props.curriculumActions.getCurriculumCompliance(curriculumId);
@@ -61,6 +60,7 @@ class CurriculumContainer extends Component {
                                 standard={this.props.standard}
                                 course={this.props.course}
                                 curriculumActions={this.props.curriculumActions}
+                                courseActions={this.props.courseActions}
                             />
                         )
                     }

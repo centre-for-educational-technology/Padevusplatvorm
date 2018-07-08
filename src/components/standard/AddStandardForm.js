@@ -87,7 +87,7 @@ export default class AddStandardForm extends Component {
                         <Form.TextArea
                             required
                             min={3}
-                            max={256}
+                            max={1024}
                             label="Kutsestandardi kirjeldus"
                             placeholder="Kutsestandardi kirjeldus"
                             value={standard.description}
