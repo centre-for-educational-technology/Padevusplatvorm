@@ -243,7 +243,7 @@ export default class ViewCurriculum extends Component {
                         </Grid.Row>
                     );
                 }) : null}
-                {standard && standard.competencies
+                {standard && standard.competencies && curriculum.competencies
                     ? (
                         <Grid.Row>
                             <Grid.Column width={15}>
