@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {Container, Segment, Grid, Dimmer, Loader} from 'semantic-ui-react';
+import {Container, Segment, Grid, Dimmer, Loader, Icon} from 'semantic-ui-react';
 import history from '../config/history';
 import * as standardActions from '../actions/standard';
 import * as curriculumActions from '../actions/curriculum';
@@ -39,17 +39,18 @@ class DashboardContainer extends Component {
                             Lisa uus
                         </a>
                         {!standard.isLoading
-                            ? (<ol>
+                            ? (<ul>
                                 {standard.standardsList.map((standard, standardKey) => {
                                     return (
                                         <li key={standardKey}>
                                             <a href={'/standard/view/' + standard.id}>
-                                                {standard.name}
+                                                <Icon name="file"/>
+                                                {standard.name}, tase {standard.level}
                                             </a>
                                         </li>
                                     );
                                 })}
-                            </ol>)
+                            </ul>)
                             : dimmer}
                     </Grid.Column>
                     <Grid.Column>
@@ -58,17 +59,18 @@ class DashboardContainer extends Component {
                             Lisa uus
                         </a>
                         {!course.isLoading
-                            ? (<ol>
+                            ? (<ul>
                                 {course.coursesList.map((course, courseKey) => {
                                     return (
                                         <li key={courseKey}>
                                             <a href={'/course/view/' + course.id}>
-                                                {course.title}
+                                                <Icon name="bookmark"/>
+                                                {course.code} {course.title}
                                             </a>
                                         </li>
                                     );
                                 })}
-                            </ol>)
+                            </ul>)
                             : dimmer}
                     </Grid.Column>
                     <Grid.Column>
@@ -77,17 +79,18 @@ class DashboardContainer extends Component {
                             Lisa uus
                         </a>
                         {!curriculum.isLoading
-                            ? (<ol>
+                            ? (<ul>
                                 {curriculum.curriculaList.map((curriculum, curriculumKey) => {
                                     return (
                                         <li key={curriculumKey}>
                                             <a href={'/curriculum/view/' + curriculum.id}>
-                                                {curriculum.title}
+                                                <Icon name="graduation cap"/>
+                                                {curriculum.code} {curriculum.title}
                                             </a>
                                         </li>
                                     );
                                 })}
-                            </ol>)
+                            </ul>)
                             : dimmer}
                     </Grid.Column>
                 </Grid>
