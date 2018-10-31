@@ -1,4 +1,12 @@
-# Padevusplatvorm
+# Pädevusplatvorm
+
+## Prototype
+
+[Prototype](https://platform.duttiv.com/)
+
+Test credentials:
+u: tester@tlu.ee
+p: MyPass123
 
 ## Documentation wiki
 
